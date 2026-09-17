@@ -2,8 +2,7 @@ if (process.env.NODE_ENV != "production") {
     require("dotenv").config();
 }
 console.log("MAP TOKEN EXISTS:", !!process.env.MAP_TOKEN);
-console.log("MAP TOKEN START:", process.env.MAP_TOKEN ? .substring(0, 3));
-
+console.log("MAP TOKEN START:", process.env.MAP_TOKEN && process.env.MAP_TOKEN.substring(0, 3));
 
 const dns = require("dns");
 
